@@ -1,6 +1,6 @@
 package com.sorter;
 
-public class Employee implements Sortable{
+public class Employee implements Sortable<Employee>{
 	private int empId;
 	private String name;
 	private double salary;
@@ -19,8 +19,7 @@ public class Employee implements Sortable{
 	}
 	
 	@Override
-	public void sort(Sortable[] s) {
-		s = (Employee[]) s;
+	public void sort(Employee[] s) {
 		Employee tmp;
 		for(int i=0; i < s.length; i++) {
 			for(int j=1; j < (s.length-i); j++) {
