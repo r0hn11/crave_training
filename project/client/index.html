@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form id="addform">
+    <h3>Add</h3>
+    <div class="field">
+      <label for="carid">Car id:</label>
+      <input type="number" id="carid">
+    </div>
+    <div class="field">
+      <label for="carmodel">Model:</label>
+      <input type="text" id="carmodel">
+    </div>
+    <div class="field">
+      <label for="carcolor">Color:</label>
+      <input type="text" id="carcolor">
+    </div>
+    <div class="field">
+      <label for="carprice">Price:</label>
+      <input type="number" id="carprice">
+    </div>
+    <button id="addcar" type="submit">Add car</button>
+  </form>
+
+  <hr>
+
+  <h3>View</h3>
+  <button id="getcars">Refresh</button>
+  <form id="updateform">
+    <input type="number" id="updateid" disabled>
+    <input type="text" id="updatemodel">
+    <input type="text" id="updatecolor">
+    <input type="number" id="updateprice">
+    <button id="updatebtn">Update</button>
+    <button id="cancelbtn">Cancel</button>
+  </form>
+  <table id="data"></table>
+
+  <div id="warningbox"></div>
+
+</body>
+<script src="index.js"></script>
+</html>

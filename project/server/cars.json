@@ -1,0 +1,32 @@
+[
+  {
+    "id":152,
+    "model":"Honda",
+    "color":"Grey",
+    "price":20
+  },
+  {
+    "id":155,
+    "model":"Mercedes",
+    "color":"Red",
+    "price":40
+  },
+  {
+    "id":153,
+    "model":"Jaguar",
+    "color":"Black",
+    "price":50
+  },
+  {
+    "id":159,
+    "model":"Honda",
+    "color":"White",
+    "price":25
+  },
+  {
+    "id":151,
+    "model":"AM",
+    "color":"Grey",
+    "price":52
+  }
+]
