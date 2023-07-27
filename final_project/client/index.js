@@ -133,6 +133,18 @@ $('#addform').on('submit',function(e){
           },100)
           $('#warning').text('Entry with same id already exist')
         }
+        else{
+          $('#warning').css('transform','translateY(10px)')
+          setTimeout(()=>{
+            $('#warning').css('transform','translateY(0)')
+            setTimeout(()=>{
+              $('#warning').css('transform','translateY(-100%)')
+              $('#warning').css('background','#e02a2a')
+            },2000)
+          },100)
+          $('#warning').text('Entry successful')
+          $('#warning').css('background','#3bd080')
+        }
       },
       error: ()=>console.log('Could not add new entry')
     })
