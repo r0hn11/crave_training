@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+
+    <header>
+      <div id="header_sub">
+        <h1 id="title">Car Management Application</h1>
+        <h2 id="subtitle">made with ExpressJS and AJAX</h2>
+      </div>
+    </header>
+
+    <div id="app">
+      
+      <h3 id="appttl"></h3>
+      <table id="data"></table>
+
+      <div class="actions">
+        <button id="add" class="enablebtn">Add entry</button>
+        <button id="modify" class="enablebtn">Modify entry</button>
+      </div>
+
+      <div id="addformpar" class="formpar">
+        <h4>Add</h4>
+        <form id="addform">
+          <div class="field">
+            <label for="cid">Car Id</label>
+            <input type="number" id="cid">
+          </div>
+          <div class="field">
+            <label for="cmodel">Model</label>
+            <input type="text" id="cmodel">
+          </div>
+          <div class="field">
+            <label for="ccolor">Color</label>
+            <input type="text" id="ccolor">
+            <div id="swatch1"></div>
+          </div>
+          <div class="field">
+            <label for="cprice">Price</label>
+            <input type="number" id="cprice">
+          </div>
+          <div class="actions">
+            <button type="submit" id="sub-add">Submit</button>
+            <button type="button" id="sub-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="editformpar" class="formpar">
+        <h4>Update</h4>
+        <form id="editform">
+          <div class="field">
+            <label for="ucid">Car Id</label>
+            <input type="number" id="ucid">
+          </div>
+          <div class="field">
+            <label for="ucmodel">Model</label>
+            <input type="text" id="ucmodel">
+          </div>
+          <div class="field">
+            <label for="uccolor">Color</label>
+            <input type="text" id="uccolor">
+            <div id="swatch2"></div>
+          </div>
+          <div class="field">
+            <label for="ucprice">Price</label>
+            <input type="number" id="ucprice">
+          </div>
+          <div class="actions">
+            <button type="submit" id="sub-update">Update</button>
+            <button type="button" id="sub-ucancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="warning"></div>
+
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="index.js"></script>
+</html>
