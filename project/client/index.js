@@ -40,6 +40,40 @@ function validateAddFields(){
   return {values:input_values,flag}
 } 
 
+function validateupdateFields(){
+
+  $('#warningbox').text('')
+  // $('#updateid').css('border','3px solid'+input_border_clr)
+  $('#updatemodel').css('border','3px solid'+input_border_clr)
+  $('#updatecolor').css('border','3px solid'+input_border_clr)
+  $('#updateprice').css('border','3px solid'+input_border_clr)
+
+  let flag= false, idflag=true, modelflag=true,colorflag=true,priceflag=true
+  const input_values = {
+    carid : $('#updateid').val(),
+    carmodel : $('#updatemodel').val(),
+    carcolor : $('#updatecolor').val(),
+    carprice : $('#updateprice').val()
+  }
+  if(input_values.carmodel == ''){
+    $('#warningbox').append('Car model cannot be empty. ')
+    $('#updatemodel').css('border','3px solid red')
+    modelflag = false
+  }
+  if(input_values.carcolor == ''){
+    $('#warningbox').append('Car color cannot be empty. ')
+    $('#updatecolor').css('border','3px solid red')
+    colorflag = false
+  }
+  if(input_values.carprice == ''){
+    $('#warningbox').append('Update Car price cannot be empty. ')
+    $('#updateprice').css('border','3px solid red')
+    priceflag = false
+  }
+  flag = idflag && modelflag && colorflag && priceflag
+  return {values:input_values,flag}
+} 
+
 // fetch data ajax
 function loadData(){
   $('#data').css('border','2px solid red')
@@ -105,6 +139,7 @@ $(document).on('click', '.editbtn', function(){
       updatecolor : $('#updatecolor').val(),
       updateprice : $('#updateprice').val()
     }
+    const val_res = validateupdateFields()
     if(val_res.flag){
       $.ajax({
         url:'/cars/modify',
